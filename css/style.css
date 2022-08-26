@@ -5,7 +5,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #1c1d25;
+  background-color: #fff;
 
   /* Because we want header to be sticky later */
   height: 9.6rem;
@@ -15,6 +15,7 @@
 
 .logo {
   height: 3rem;
+  border-radius: 50%;
 }
 
 /**************************/
@@ -58,19 +59,25 @@
 /* HERO SECTION */
 /**************************/
 .section-hero {
-  background-color: #1c1d25;
-  padding: 4.8rem 0 0 0;
+  background-color: #0c1b33;
+  padding: 4.8rem 0 9.6rem 0;
+  margin-bottom: 9.6rem;
 }
 .hero {
   max-width: 130rem;
   margin: 0 auto;
-  padding: 0 3.2rem;
+  padding: 0 0 0 3.2rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 5rem;
+  gap: 9.6rem;
   align-items: center;
-}
 
+  /* border-radius: 9px; */
+  /* overflow: hidden; */
+  /* box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.075); */
+}
+.hero-img-box {
+}
 .hero-img {
   width: 100%;
 }
