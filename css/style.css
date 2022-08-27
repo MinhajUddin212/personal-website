@@ -3,9 +3,9 @@
 /**************************/
 .header {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  background-color: #fff;
+  background-color: #303541;
 
   /* Because we want header to be sticky later */
   height: 9.6rem;
@@ -14,24 +14,27 @@
 }
 
 .logo {
-  height: 3rem;
-  border-radius: 50%;
+  height: 4rem;
+  /* border-radius: 50%; */
 }
 
 /**************************/
 /* NAVIGATION */
 /**************************/
+.main-nav {
+  color: #e6e6e6;
+}
 .main-nav-list {
   list-style: none;
   display: flex;
   align-items: center;
   gap: 4.8rem;
+  font-size: 2rem;
 }
 .main-nav-link:link,
 .main-nav-link:visited {
   display: inline-block;
   text-decoration: none;
-  color: #333;
   font-weight: 500;
   font-size: 1.8rem;
   transition: all 0.3s;
@@ -59,10 +62,17 @@
 /* HERO SECTION */
 /**************************/
 .section-hero {
-  background-color: #0c1b33;
-  padding: 4.8rem 0 9.6rem 0;
-  margin-bottom: 9.6rem;
+  color: #e6e6e6;
+  background-color: #303541;
+  padding: 4.8rem 0 4.8rem 0;
+  /* margin-bottom: 9.6rem; */
 }
+.hero-title {
+  font-size: 3.2rem;
+  line-height: 1.05;
+  margin-bottom: 3.2rem;
+}
+
 .hero {
   max-width: 130rem;
   margin: 0 auto;
@@ -72,12 +82,25 @@
   gap: 9.6rem;
   align-items: center;
 
-  /* border-radius: 9px; */
-  /* overflow: hidden; */
-  /* box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.075); */
+  border-radius: 9px;
+  overflow: hidden;
+  box-shadow: 0 1.4rem 3rem rgba(0, 0, 0, 0.15);
 }
-.hero-img-box {
+
+.element-p {
+  font-size: 2rem;
+  padding: 1rem 0;
 }
+
+.hero-description {
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 1.6;
+  position: relative;
+  left: 20px;
+}
+
 .hero-img {
   width: 100%;
+  box-shadow: 0 1.2rem 3.2rem rgba(245, 241, 241, 0.03);
 }

@@ -23,8 +23,8 @@ Large: 1.8
 
 --- 02 COLORS
 
-background color: #F4F3EF
-- Primary: #E66A2C
+background color: #f8f9fa
+- Primary: #303541
 - Tints:
 #fdf2e9
 #fae5d3
@@ -76,15 +76,15 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  font-family: "Rubik", sans-serif;
+  font-family: "Ubuntu Mono", sans-serif;
   line-height: 1;
   font-weight: 400;
-  color: #fff;
-  background-color: #f4f3ef;
+  background-color: #f8f9fa;
 
   /* Only works if there is nothing absolutely positioned in relation to body */
   overflow-x: hidden;
 }
+
 /**************************/
 /* GENRAL REUSABLE COMPONENTS */
 /**************************/
@@ -93,6 +93,17 @@ body {
   max-width: 120rem;
   padding: 0 3.2rem;
   margin: 0 auto;
+}
+
+.code-element {
+  color: #ff6b6b;
+}
+
+.code-element-class {
+  color: #74b816;
+}
+.code-element-quotes {
+  color: #ffec99;
 }
 
 .heading-primary {
