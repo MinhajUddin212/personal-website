@@ -64,7 +64,8 @@ Medium: 11px
   box-sizing: border-box;
 }
 main {
-  /* padding: 0 2rem; */
+  /* padding: 0 9.6rem; */
+  /* overflow: hidden; */
   /* perspective: 500px; */
 }
 
