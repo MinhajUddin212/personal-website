@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <link rel="icon" href="img/website-icon.png" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -16,29 +18,22 @@
     <link rel="stylesheet" href="css/general.css" />
     <link rel="stylesheet" href="css/queries.css" />
 
-    <script defer src="js/script.js"></script>
+    <script defer src="js/app.js"></script>
 
     <title>Minhaj Uddin &mdash; Portfolio</title>
   </head>
   <body>
     <header class="header">
-      <!-- logo -->
-      <!-- <a href="#">
-        <img
-          class="logo"
-          alt="minhaj uddin logo"
-          src="img/minhaj-favicon.png"
-        />
-      </a> -->
       <nav class="main-nav">
         <ul class="main-nav-list">
-          <li><a class="main-nav-link">.aboutMe()</a></li>
-          <li><a class="main-nav-link">.skills()</a></li>
-          <li><a class="main-nav-link">.projects()</a></li>
-          <li><a class="main-nav-link">.contactMe()</a></li>
+          <li><a href="#" class="main-nav-link">.aboutMe()</a></li>
+          <li><a href="#" class="main-nav-link">.skills()</a></li>
+          <li><a href="#" class="main-nav-link">.projects()</a></li>
+          <li><a href="#" class="main-nav-link">.contactMe()</a></li>
         </ul>
-      </nav>
+      
     </header>
+
     <main>
       <section class="section-hero">
         <div class="hero">
@@ -55,24 +50,39 @@
               <span>&lt;&#47;<span class="code-element">h1</span>&gt;</span>
             </h1>
 
-            <p class="element-p">&lt;<span class="code-element">p</span>&gt;</p>
-            <div class="hero-description">
-              <p>I am an aspiring software developer</p>
-              <p>With a passion for learning</p>
-              <p>And helping those around me</p>
+            <div class="hero-description-box">
+              <p class="element-p">
+                &lt;<span class="code-element">p</span>&gt;
+              </p>
+              <div class="hero-description">
+                <p>I am an aspiring software developer</p>
+                <p>With a passion for learning</p>
+                <p>And helping those around me</p>
+              </div>
+              <p class="element-p">
+                &lt;&#47;<span class="code-element">p</span>&gt;
+              </p>
+              <p class="element-p">
+                &lt;<span class="code-element">p</span>&gt;
+              </p>
+              <div class="hero-description">
+                <p>School: Rutgers University - New Brunswick</p>
+                <p>Major: B.S in Computer Science</p>
+                <p>Graduating: 2024</p>
+              </div>
+              <p class="element-p">
+                &lt;&#47;<span class="code-element">p</span>&gt;
+              </p>
             </div>
-            <p class="element-p">
-              &lt;&#47;<span class="code-element">p</span>&gt;
-            </p>
-            <p class="element-p">&lt;<span class="code-element">p</span>&gt;</p>
-            <div class="hero-description">
-              <p>School: Rutgers University - New Brunswick</p>
-              <p>Major: B.S in Computer Science</p>
-              <p>Graduating: 2024</p>
+
+            <div class="btn-resume">
+              <a
+                class="resume"
+                href="Resume-Minhaj_Uddin.pdf"
+                download="Minhaj_Uddin-Resume"
+                >My Resume</a
+              >
             </div>
-            <p class="element-p">
-              &lt;&#47;<span class="code-element">p</span>&gt;
-            </p>
           </div>
           <div class="hero-img-box">
             <picture>
@@ -86,7 +96,7 @@
           </div>
         </div>
       </section>
-      <section class="section-about-me container">
+      <!-- <section class="section-about-me container">
         <div class="about-me">
           <h2>
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -97,7 +107,7 @@
             quisquam pariatur earum officia!
           </h2>
         </div>
-      </section>
+      </section> -->
     </main>
   </body>
 </html>

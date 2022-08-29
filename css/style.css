@@ -21,10 +21,12 @@
 /**************************/
 /* NAVIGATION */
 /**************************/
-.main-nav {
+/* .main-nav {
   color: #e6e6e6;
-}
+} */
+
 .main-nav-list {
+  color: #e6e6e6;
   list-style: none;
   display: flex;
   align-items: center;
@@ -33,15 +35,17 @@
 }
 .main-nav-link:link,
 .main-nav-link:visited {
+  color: #e6e6e6;
   display: inline-block;
   text-decoration: none;
   font-weight: 500;
   font-size: 1.8rem;
-  transition: all 0.3s;
+  transition: all 0.5s;
 }
 .main-nav-link:hover,
 .main-nav-link:active {
-  color: #fff;
+  transform: translateY(-0.5rem);
+  color: #ff6b6b;
   cursor: pointer;
 }
 
@@ -62,15 +66,24 @@
 /* HERO SECTION */
 /**************************/
 .section-hero {
+  perspective: 300rem;
+  overflow: hidden;
+
   color: #e6e6e6;
   background-color: #303541;
   padding: 4.8rem 0 4.8rem 0;
   /* margin-bottom: 9.6rem; */
 }
+.hero-text-box {
+  transform-style: preserve-3d;
+}
 .hero-title {
+  transform-style: preserve-3d;
+  transform: translateZ(100px);
   font-size: 3.2rem;
   line-height: 1.05;
   margin-bottom: 3.2rem;
+  transition: all 0.75s ease-out;
 }
 
 .hero {
@@ -83,15 +96,21 @@
   align-items: center;
 
   border-radius: 9px;
-  overflow: hidden;
-  box-shadow: 0 1.4rem 3rem rgba(0, 0, 0, 0.15);
+  /* overflow: hidden; */
+  box-shadow: 0 1.4rem 3rem rgba(0, 0, 0, 0.15), 0 0rem 5rem rgba(0, 0, 0, 0.15);
+
+  overflow: visible !important;
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
 }
 
 .element-p {
   font-size: 2rem;
   padding: 1rem 0;
 }
-
+.hero-description-box {
+  transition: all 0.75s ease-out;
+}
 .hero-description {
   font-size: 1.8rem;
   font-weight: 400;
@@ -100,7 +119,32 @@
   left: 20px;
 }
 
+.resume:link,
+.resume:visited {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 2.4rem;
+  font-weight: 400;
+  color: #303541;
+  cursor: pointer;
+  padding: 1.2rem 2.4rem;
+  border-radius: 9px;
+  background-color: #e6e6e6;
+  transition: all 0.4s;
+}
+.resume:hover,
+.resume:active {
+  color: #e6e6e6;
+  background-color: #ff6b6b;
+  transform: translateY(-1rem);
+  box-shadow: 0 1.2rem 2.4rem rgba(0, 0, 0, 0.01);
+}
+
+.btn-resume {
+  margin-top: 4rem;
+  transition: all 0.75s ease-out;
+}
+
 .hero-img {
   width: 100%;
-  box-shadow: 0 1.2rem 3.2rem rgba(245, 241, 241, 0.03);
 }
