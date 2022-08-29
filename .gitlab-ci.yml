@@ -10,13 +10,51 @@
 #   only:
 #     - master
 
+# image: ruby:2.7
+
+# workflow:
+#   rules:
+#     - if: $CI_COMMIT_BRANCH
+
+# pages:
+#   script:
+#     - gem install bundler
+#     - bundle install
+#     - bundle exec jekyll build -d public
+#   artifacts:
+#     paths:
+#       - public
+
 image: ruby:2.7
 
-pages:
+workflow:
+  rules:
+    - if: $CI_COMMIT_BRANCH
+
+stages:
+  - test
+  - deploy
+
+before_script:
+  - gem install bundler
+  - bundle install
+
+test:
+  stage: test
   script:
-    - gem install bundler
-    - bundle install
+    - bundle exec jekyll build -d test
+  artifacts:
+    paths:
+      - test
+  rules:
+    - if: $CI_COMMIT_BRANCH != "master"
+
+pages:
+  stage: deploy
+  script:
     - bundle exec jekyll build -d public
   artifacts:
     paths:
       - public
+  rules:
+    - if: $CI_COMMIT_BRANCH == "master"
