@@ -1,33 +1,148 @@
-//to animate
-const container = document.querySelector(".section-hero");
-const card = document.querySelector(".hero");
+///////////////////////////////////////////////////////////
 
-const title = document.querySelector(".hero-title");
-const btnResume = document.querySelector(".btn-resume");
+//Smooth srolling animation
+
+// const allLinks = document.querySelectorAll("a:link");
+// console.log(allLinks);
+// allLinks.forEach(function (link) {
+//   link.addEventListener("click", function (e) {
+//     e.preventDefault();
+//     const href = link.getAttribute("href");
+
+//     //scroll back to top
+//     if (href === "#")
+//       window.scrollTo({
+//         top: 0,
+//         behavior: "smooth",
+//       });
+
+//     //scroll to other links
+//     if (href !== "#" && href.startsWith("#")) {
+//       const sectionEl = document.querySelector(href);
+//       sectionEl.scrollIntoView({ behavior: "smooth" });
+//     }
+
+//     // close mobile navigation
+//     if (link.classList.contains("main-nav-link")) {
+//       headerEL.classList.toggle("nav-open");
+//     }
+//   });
+// });
+
+// STICKY NAV
+const sectionHeroEL = document.querySelector(".section-hero");
+const obs = new IntersectionObserver(
+  function (entries) {
+    const ent = entries[0];
+    console.log(ent);
+    if (ent.isIntersecting === false) {
+      document.body.classList.add("sticky");
+    }
+    if (ent.isIntersecting === true) {
+      document.body.classList.remove("sticky");
+    }
+  },
+  {
+    //in the viewport
+    root: null,
+    threshold: 0,
+    rootMargin: "-80px",
+  }
+);
+obs.observe(sectionHeroEL);
+
+//TO ANIMATE HERO SECTION
+const heroContainer = document.querySelector(".section-hero");
+const heroCard = document.querySelector(".hero");
+
+const heroTitle = document.querySelector(".hero-title");
+const btnResume = document.querySelector(".buttons");
 const heroDescription = document.querySelector(".hero-description-box");
+const heroMainTitle = document.querySelector(".hero-about-me");
 
 //Moving Animation Event
-container.addEventListener("mousemove", (e) => {
+heroContainer.addEventListener("mousemove", (e) => {
   let xAxis = (window.innerWidth / 2 - e.pageX) / 60;
   let yAxis = (window.innerHeight / 2 - e.pageY) / 60;
-  card.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
+  heroCard.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
 });
 
 //Animate In
-container.addEventListener("mouseenter", (e) => {
-  card.style.transition = "none";
+heroContainer.addEventListener("mouseenter", (e) => {
+  heroCard.style.transition = "none";
   //Popout
-  title.style.transform = "translateZ(10rem)";
-  heroDescription.style.transform = "translateZ(15rem)";
-  btnResume.style.transform = "translateZ(10rem)";
+  heroMainTitle.style.transform = "translateZ(12rem)";
+  heroMainTitle.style.color = "#82bf2d";
+  heroTitle.style.transform = "translateZ(10rem)";
+  heroDescription.style.transform = "translateZ(7.5rem)";
+  btnResume.style.transform = "translateZ(5rem)";
 });
 
 //Animate Out
-container.addEventListener("mouseleave", (e) => {
-  card.style.transition = "all 0.5s ease";
-  card.style.transform = `rotateY(0deg) rotateX(0deg)`;
+heroContainer.addEventListener("mouseleave", (e) => {
+  heroCard.style.transition = "all 0.3s ease";
+  heroCard.style.transform = `rotateY(0deg) rotateX(0deg)`;
   //Popback
-  title.style.transform = "translateZ(0rem)";
+  (heroMainTitle.style.transform = "translateZ(0rem)"),
+    (heroMainTitle.style.color = "#e6e6e6");
+
+  heroTitle.style.transform = "translateZ(0rem)";
   btnResume.style.transform = "translateZ(0rem)";
   heroDescription.style.transform = "translateZ(0rem)";
 });
+
+// TO ANIMATE SKILLS SECTION
+
+const skillsContainer = document.querySelector(".section-skills");
+const skillsCard = document.querySelector(".skills-container");
+
+const skillsHeading = document.querySelector(".skills-heading");
+
+//Moving Animation Event
+skillsContainer.addEventListener("mousemove", (e) => {
+  let xAxis = (window.innerWidth / 2 - e.pageX) / 80;
+  let yAxis = (window.innerHeight / 2 - e.pageY) / 80;
+  skillsCard.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
+});
+
+// Animate In
+skillsContainer.addEventListener("mouseenter", (e) => {
+  skillsCard.style.transition = "none";
+  //Popout
+  skillsHeading.style.transform = "translateZ(12rem)";
+  skillsHeading.style.color = "#82bf2d";
+});
+
+// Animate out
+skillsContainer.addEventListener("mouseleave", (e) => {
+  skillsCard.style.transition = "all 0.3s ease";
+  skillsCard.style.transform = `rotateY(0deg) rotateX(0deg)`;
+  //Popback
+  (skillsHeading.style.transform = "translateZ(0rem)"),
+    (skillsHeading.style.color = "#e6e6e6");
+});
+
+// Set current year
+const yearEL = document.querySelector(".year");
+const currentYear = new Date().getFullYear();
+yearEL.textContent = currentYear;
+
+///////////////////////////////////////////////////////////
+// Fixing flexbox gap property missing in some Safari versions
+function checkFlexGap() {
+  var flex = document.createElement("div");
+  flex.style.display = "flex";
+  flex.style.flexDirection = "column";
+  flex.style.rowGap = "1px";
+
+  flex.appendChild(document.createElement("div"));
+  flex.appendChild(document.createElement("div"));
+
+  document.body.appendChild(flex);
+  var isSupported = flex.scrollHeight === 1;
+  flex.parentNode.removeChild(flex);
+  console.log(isSupported);
+
+  if (!isSupported) document.body.classList.add("no-flexbox-gap");
+}
+checkFlexGap();

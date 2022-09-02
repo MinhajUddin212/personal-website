@@ -10,21 +10,6 @@
 #   only:
 #     - master
 
-# image: ruby:2.7
-
-# workflow:
-#   rules:
-#     - if: $CI_COMMIT_BRANCH
-
-# pages:
-#   script:
-#     - gem install bundler
-#     - bundle install
-#     - bundle exec jekyll build -d public
-#   artifacts:
-#     paths:
-#       - public
-
 image: ruby:2.7
 
 workflow:

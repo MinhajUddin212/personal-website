@@ -20,6 +20,20 @@
 
     <script defer src="js/app.js"></script>
 
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule=""
+      src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"
+    ></script>
+
+    <script
+      defer
+      src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"
+    ></script>
+
     <title>Minhaj Uddin &mdash; Portfolio</title>
   </head>
   <body>
@@ -27,18 +41,19 @@
       <nav class="main-nav">
         <ul class="main-nav-list">
           <li><a href="#" class="main-nav-link">.aboutMe()</a></li>
-          <li><a href="#" class="main-nav-link">.skills()</a></li>
+          <li><a href="#skills" class="main-nav-link">.skills()</a></li>
           <li><a href="#" class="main-nav-link">.projects()</a></li>
-          <li><a href="#" class="main-nav-link">.contactMe()</a></li>
         </ul>
-      
+      </nav>
     </header>
 
     <main>
+      <!-- HERO SECTION -->
       <section class="section-hero">
         <div class="hero">
           <div class="hero-text-box">
-            <h1 class="hero-title">
+            <h1 class="hero-about-me">.aboutMe()</h1>
+            <h2 class="hero-title">
               <span
                 >&lt;<span class="code-element">h1</span>
                 <span class="code-element-class">class</span>=<span
@@ -48,7 +63,7 @@
               >
               <strong>Minhaj Uddin</strong>
               <span>&lt;&#47;<span class="code-element">h1</span>&gt;</span>
-            </h1>
+            </h2>
 
             <div class="hero-description-box">
               <p class="element-p">
@@ -75,12 +90,15 @@
               </p>
             </div>
 
-            <div class="btn-resume">
+            <div class="buttons">
               <a
                 class="resume"
                 href="Resume-Minhaj_Uddin.pdf"
                 download="Minhaj_Uddin-Resume"
                 >My Resume</a
+              >
+              <a class="resume" href="mailto:minhajuddin212@gmail.com"
+                >Contact Me</a
               >
             </div>
           </div>
@@ -96,18 +114,91 @@
           </div>
         </div>
       </section>
-      <!-- <section class="section-about-me container">
-        <div class="about-me">
-          <h2>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Perspiciatis, nulla voluptatibus sequi non eligendi expedita
-            ducimus. Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-            Ipsa adipisci quaerat magnam. Assumenda impedit odio, at veritatis
-            voluptate corporis quaerat quam iste error totam est eligendi
-            quisquam pariatur earum officia!
-          </h2>
+      <!-- SKILLS SECTION  -->
+      <section class="section-skills" id="skills">
+        <div class="section-container skills-container">
+          <h2 class="heading-secondary skills-heading">.skills()</h2>
+          <div class="skills grid grid--3-cols">
+            <div class="skills-col-1">
+              <ul class="skills-description">
+                <li class="skills-item">Java</li>
+                <li class="skills-item">HTML</li>
+                <li class="skills-item">Git</li>
+                <li class="skills-item">Docker images</li>
+                <li class="skills-item">Jenkins</li>
+              </ul>
+            </div>
+            <div class="skills-col-2">
+              <ul class="skills-description">
+                <li class="skills-item">C</li>
+                <li class="skills-item">CSS</li>
+                <li class="skills-item">Github</li>
+                <li class="skills-item">AWS Ec2</li>
+                <li class="skills-item">Maven</li>
+              </ul>
+            </div>
+            <div class="skills-col-3">
+              <ul class="skills-description">
+                <li class="skills-item">Python</li>
+                <li class="skills-item">javaScript</li>
+                <li class="skills-item">Gitlab</li>
+                <li class="skills-item">CI/CD</li>
+                <li class="skills-item">OOP</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- PROJECTS SECTION -- WORK IN PROGGRESS-->
+      <!-- <section class="section-projects" id="projects">
+        <div class="section-container projects-container">
+          <h2 class="heading-secondary projects-heading">.projects()</h2>
+          <div>coming soon!</div>
         </div>
       </section> -->
     </main>
+    <footer class="footer">
+      <div class="logo-col">
+        <a href="#" class="footer-logo">
+          <img
+            class="logo"
+            alt="Minhaj Uddin logo"
+            src="img/website-icon.png"
+          />
+        </a>
+
+        <ul class="social-links">
+          <li>
+            <a
+              class="footer-link"
+              href="https://www.instagram.com/_minhaj_uddin_/"
+              target="_blank"
+              ><ion-icon class="social-icon" name="logo-instagram"></ion-icon
+            ></a>
+          </li>
+          <li>
+            <a
+              class="footer-link"
+              href="https://github.com/MinhajUddin212"
+              target="_blank"
+              ><ion-icon class="social-icon" name="logo-github"></ion-icon
+            ></a>
+          </li>
+          <li>
+            <a
+              class="footer-link"
+              href="https://www.linkedin.com/in/minhaj-u-885b75130/"
+              target="_blank"
+              ><ion-icon class="social-icon" name="logo-linkedin"></ion-icon
+            ></a>
+          </li>
+        </ul>
+
+        <p class="copyright">
+          Copyright &copy; <span class="year">2027</span> by Minhaj Uddin, All
+          rights reserved.
+        </p>
+      </div>
+    </footer>
   </body>
 </html>
