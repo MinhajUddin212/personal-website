@@ -1,34 +1,3 @@
-///////////////////////////////////////////////////////////
-
-//Smooth srolling animation
-
-// const allLinks = document.querySelectorAll("a:link");
-// console.log(allLinks);
-// allLinks.forEach(function (link) {
-//   link.addEventListener("click", function (e) {
-//     e.preventDefault();
-//     const href = link.getAttribute("href");
-
-//     //scroll back to top
-//     if (href === "#")
-//       window.scrollTo({
-//         top: 0,
-//         behavior: "smooth",
-//       });
-
-//     //scroll to other links
-//     if (href !== "#" && href.startsWith("#")) {
-//       const sectionEl = document.querySelector(href);
-//       sectionEl.scrollIntoView({ behavior: "smooth" });
-//     }
-
-//     // close mobile navigation
-//     if (link.classList.contains("main-nav-link")) {
-//       headerEL.classList.toggle("nav-open");
-//     }
-//   });
-// });
-
 // STICKY NAV
 const sectionHeroEL = document.querySelector(".section-hero");
 const obs = new IntersectionObserver(
@@ -56,7 +25,7 @@ const heroContainer = document.querySelector(".section-hero");
 const heroCard = document.querySelector(".hero");
 
 const heroTitle = document.querySelector(".hero-title");
-const btnResume = document.querySelector(".buttons");
+const btnResume = document.querySelector(".hero-buttons");
 const heroDescription = document.querySelector(".hero-description-box");
 const heroMainTitle = document.querySelector(".hero-about-me");
 
@@ -100,8 +69,8 @@ const skillsHeading = document.querySelector(".skills-heading");
 
 //Moving Animation Event
 skillsContainer.addEventListener("mousemove", (e) => {
-  let xAxis = (window.innerWidth / 2 - e.pageX) / 80;
-  let yAxis = (window.innerHeight / 2 - e.pageY) / 80;
+  let xAxis = (window.innerWidth / 2 - e.pageX) / 90;
+  let yAxis = (window.innerHeight / 2 - e.pageY) / 90;
   skillsCard.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
 });
 
