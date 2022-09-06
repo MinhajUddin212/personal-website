@@ -244,10 +244,13 @@ ul.skills-description li:before {
   padding: 4.8rem 9.6rem 10rem 9.6rem;
 }
 .projects-heading {
+  font-size: 4.4rem;
   padding: 3.2rem 0;
   padding-left: 3.2rem;
   max-width: 130rem;
   margin: 0 auto;
+  /* color: #82bf2d !important; */
+  transition: all 0.5s;
 }
 .projects-container {
   transform-style: preserve-3d;
@@ -272,10 +275,13 @@ ul.skills-description li:before {
   /* gap: 3.2rem; */
 }
 .project-item-heading {
-  font-size: 1.8rem;
+  font-size: 3rem;
   align-self: flex-start;
+  color: #ffec99;
 }
 .project-description {
+  line-height: 1.6;
+  font-size: 1.8rem;
   padding-bottom: 4.8rem;
   padding-top: 2.4rem;
 }

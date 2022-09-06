@@ -1,0 +1,38 @@
+/**************************/
+/* BELOW 1500px (Smaller desktops) */
+/**************************/
+@media (max-width: 94em) {
+  .hero-about-me {
+    font-size: 4.8rem;
+  }
+  .hero-title {
+    font-size: 2.4rem;
+  }
+  .hero-description {
+    font-size: 1.4rem;
+  }
+}
+
+/**************************/
+/* BELOW 1200px (Landscape Tablets) */
+/**************************/
+@media (max-width: 75em) {
+  html {
+    /* 9px / 16px  */
+    font-size: 56.25%;
+  }
+}
+
+/**************************/
+/* BELOW 1090px (Tablets) */
+/**************************/
+
+@media (max-width: 69em) {
+  html {
+    /* 8px / 16px = 0.5 = 50% */
+    font-size: 50%;
+  }
+  .hero {
+    gap: 6rem;
+  }
+}

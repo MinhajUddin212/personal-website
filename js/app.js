@@ -96,6 +96,27 @@ const yearEL = document.querySelector(".year");
 const currentYear = new Date().getFullYear();
 yearEL.textContent = currentYear;
 
+// TO ANIMATE PROJECTS SECTION
+const projectsContainer = document.querySelector(".section-projects");
+const projectsHeading = document.querySelector(".projects-heading");
+
+projectsContainer.addEventListener("mouseenter", (e) => {
+  projectsHeading.style.transition = "none";
+  projectsHeading.style.transition = "all 0.3s ease";
+
+  //Popout
+  projectsHeading.style.transform = "translateY(-2rem)";
+  projectsHeading.style.color = "#82bf2d";
+});
+
+projectsContainer.addEventListener("mouseleave", (e) => {
+  projectsHeading.style.transition = "all 0.3s ease";
+
+  // pop back
+  projectsHeading.style.transform = "translateY(0rem)";
+  projectsHeading.style.color = "#e6e6e6";
+});
+
 ///////////////////////////////////////////////////////////
 // Fixing flexbox gap property missing in some Safari versions
 function checkFlexGap() {
