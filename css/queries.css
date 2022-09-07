@@ -24,7 +24,7 @@
 }
 
 /**************************/
-/* BELOW 1090px (Tablets) */
+/* BELOW 1104px (Tablets) */
 /**************************/
 
 @media (max-width: 69em) {
@@ -35,4 +35,40 @@
   .hero {
     gap: 6rem;
   }
+}
+
+/**************************/
+/* BELOW 800px (small tablets) */
+/**************************/
+
+@media (max-width: 50em) {
+  .hero {
+    padding: none;
+    grid-template-columns: 1fr;
+  }
+  .hero-text-box {
+    padding: 2.4rem 4.8rem;
+  }
+  .hero-img-box {
+    grid-row: 1;
+    /* width: 40%; */
+    /* height: 575px; */
+    /* max-width: 12rem; */
+    object-fit: fill;
+  }
+  .projects-container {
+    grid-template-columns: 1fr;
+  }
+
+  .section-container {
+    padding: 1.6rem 3.2rem;
+  }
+  .skills {
+    grid-template-columns: 1fr;
+    gap: 1.6rem;
+    /* justify-content: center; */
+  }
+  /* .skills-description {
+    padding: 0.6rem 1.2rem;
+  } */
 }
