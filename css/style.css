@@ -256,6 +256,7 @@ ul.skills-description li:before {
 .projects-container {
   transform-style: preserve-3d;
   transition: all 0.75s ease-out;
+  display: flex;
 
   max-width: 130rem;
   margin: 0 auto;
@@ -275,6 +276,7 @@ ul.skills-description li:before {
    align-items: center; 
    gap: 3.2rem; */
 }
+
 .project-item-heading {
   font-size: 3rem;
   align-self: flex-start;
