@@ -27,6 +27,7 @@ before_script:
   - gem install cucumber
   - gem install selenium-webdriver
   - gem install rspec
+  - gem install chromedriver-helper -v 1.0.0
 
 test:
   stage: test
