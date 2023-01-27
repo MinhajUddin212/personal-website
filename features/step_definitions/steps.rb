@@ -1,5 +1,6 @@
 
 require 'selenium-webdriver'
+require "chromedriver-helper"
 require 'rspec'
 require 'json'
 
