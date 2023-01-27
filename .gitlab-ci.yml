@@ -58,5 +58,5 @@ test:
     # - rm google-chrome*.deb
     # - wget -N http://chromedriver.storage.googleapis.com/89.0.4389.23/chromedriver_linux64.zip
     - unzip chromedriver_linux64.zip
-    # - cp chromedriver.exe /usr/local/bin
+    - cp chromedriver.exe /usr/local/bin
     - cucumber
