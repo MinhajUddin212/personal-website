@@ -19,10 +19,14 @@ workflow:
 stages:
   - test
   - deploy
+  - post-deploy-test
 
 before_script:
   - gem install bundler
   - bundle install
+  - gem install cucumber
+  - gem install selenium-webdriver
+  - gem install rspec
 
 test:
   stage: test
@@ -43,3 +47,8 @@ pages:
       - public
   rules:
     - if: $CI_COMMIT_BRANCH == "master"
+
+test:
+  stage: post-deploy-test
+  script:
+    - cucumber
