@@ -53,10 +53,10 @@ test:
   stage: post-deploy-test
   script:
     # Install the chrome and chrome webdriver
-    - wget https://chromedriver.storage.googleapis.com/109.0.5414.74/chromedriver_win32.zip 
+    - wget https://chromedriver.storage.googleapis.com/109.0.5414.74/chromedriver_linux64.zip
     # - dpkg -i google-chrome*.deb 
     # - rm google-chrome*.deb
     # - wget -N http://chromedriver.storage.googleapis.com/89.0.4389.23/chromedriver_linux64.zip
-    - unzip chromedriver_win32.zip
-    - cp chromedriver.exe /usr/local/bin
+    - unzip chromedriver_linux64.zip
+    # - cp chromedriver.exe /usr/local/bin
     - cucumber
