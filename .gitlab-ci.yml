@@ -27,7 +27,7 @@ before_script:
   - gem install cucumber
   - gem install selenium-webdriver
   - gem install rspec
-  - gem install chromedriver-helper -v 1.0.0
+  - gem install chromedriver-helper 
 
 test:
   stage: test
@@ -58,4 +58,5 @@ test:
     # - rm google-chrome*.deb
     # - wget -N http://chromedriver.storage.googleapis.com/89.0.4389.23/chromedriver_linux64.zip
     - unzip chromedriver_win32.zip
+    - cp chromedriver.exe /usr/local/bin
     - cucumber
