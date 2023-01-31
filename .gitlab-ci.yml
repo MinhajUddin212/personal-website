@@ -19,7 +19,7 @@ workflow:
 stages:
   - test
   - deploy
-  - post-deploy-test
+  # - post-deploy-test
 
 before_script:
   - gem install bundler
@@ -27,7 +27,7 @@ before_script:
   - gem install cucumber
   - gem install selenium-webdriver
   - gem install rspec
-  - gem install chromedriver-helper 
+  - gem install chromedriver-helper
 
 test:
   stage: test
@@ -48,15 +48,14 @@ pages:
       - public
   rules:
     - if: $CI_COMMIT_BRANCH == "master"
-
-test:
-  stage: post-deploy-test
-  script:
-    # Install the chrome and chrome webdriver
-    - wget https://chromedriver.storage.googleapis.com/109.0.5414.74/chromedriver_linux64.zip
-    # - dpkg -i google-chrome*.deb 
-    # - rm google-chrome*.deb
-    # - wget -N http://chromedriver.storage.googleapis.com/89.0.4389.23/chromedriver_linux64.zip
-    - unzip chromedriver_linux64.zip
-    - cp chromedriver /usr/local/bin
-    - cucumber
+# test:
+#   stage: post-deploy-test
+#   script:
+#     # Install the chrome and chrome webdriver
+#     - wget https://chromedriver.storage.googleapis.com/109.0.5414.74/chromedriver_linux64.zip
+#     # - dpkg -i google-chrome*.deb
+#     # - rm google-chrome*.deb
+#     # - wget -N http://chromedriver.storage.googleapis.com/89.0.4389.23/chromedriver_linux64.zip
+#     - unzip chromedriver_linux64.zip
+#     - cp chromedriver /usr/local/bin
+#     - cucumber
